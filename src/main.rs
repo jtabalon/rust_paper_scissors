@@ -3,7 +3,9 @@ use rand::Rng;
 
 
 
-fn get_computer_choice() {
+fn get_computer_choice() -> i32 {
+    let num = rand::thread_rng().gen_range(0..3);
+    num
 
 
 
@@ -18,5 +20,6 @@ fn get_computer_choice() {
 
 
 fn main() {
-    println!("Hello, world!");
+    let number = get_computer_choice();
+    println!("{}", number);
 }
