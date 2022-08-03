@@ -1,3 +1,5 @@
+#![ allow(unused_variables)]
+
 use rand::Rng;
 
 
@@ -21,7 +23,11 @@ fn get_computer_choice() -> &'static str {
     hand
 }
 
+
 fn main() {
     let hand = get_computer_choice();
+    let mut line = String::new();
     println!("{}", hand);
+    println!("Please enter your choice: Rock, Paper, or Scissors.");
+    let b1 = std::io::stdin().read_line(&mut line).unwrap();
 }
